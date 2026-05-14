@@ -227,6 +227,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
               ),
             ],
           ),
+          // هنا في مشكلة في لصورة راجعيها
           child: ClipRRect(
             borderRadius: BorderRadius.circular(d.illustSize * 0.15),
             child: Image.asset(
