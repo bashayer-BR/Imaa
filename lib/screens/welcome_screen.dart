@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:imaa/core/AppDim.dart';
+import 'package:imaa/core/app_routes.dart';
 import 'package:imaa/core/theme/theme.dart';
 import 'package:imaa/widgets/buildDivider.dart';
 import 'package:imaa/widgets/buildLoginLink.dart';
@@ -95,7 +96,9 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                       // ── Guest button ──────────────────
                       // buildGuestButton(context, dim: d),
                       BuildSocialButton(
-                        onTap: (){}, 
+                        onTap: (){
+                          AppRoutes.pushNamed(context, '/profile');
+                        }, 
                         label: "ابدأ كضيف", 
                         icon: Icon(Icons.arrow_back_ios_new),
                          borderColor: AppColors.googleBorder, 

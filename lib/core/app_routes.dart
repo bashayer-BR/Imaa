@@ -3,6 +3,7 @@
 // ============================================================
 
 import 'package:flutter/material.dart';
+import 'package:imaa/screens/profile_screen.dart';
 import '../screens/welcome_screen.dart';
 import '../screens/home_screen.dart';
 
@@ -13,11 +14,14 @@ class AppRoutes {
   // ── Route Names ───────────────────────────────────────────
   static const String welcome  = '/';
   static const String home     = '/home';
+  static const String profile     = '/profile';
 
   // ── Route Map ─────────────────────────────────────────────
   static Map<String, WidgetBuilder> get routes => {
     welcome : (_) => const WelcomeScreen(),
     home    : (_) => const HomeScreen(),
+    profile    : (_) => const ProfileScreen(),
+
   };
 
   // ── Navigation Helpers ────────────────────────────────────
