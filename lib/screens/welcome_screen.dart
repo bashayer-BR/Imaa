@@ -97,7 +97,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                       // buildGuestButton(context, dim: d),
                       BuildSocialButton(
                         onTap: (){
-                          AppRoutes.pushNamed(context, '/profile');
+                          AppRoutes.pushNamed(context, '/home');
                         }, 
                         label: "ابدأ كضيف", 
                         icon: Icon(Icons.arrow_back_ios_new),
