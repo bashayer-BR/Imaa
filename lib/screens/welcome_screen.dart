@@ -107,7 +107,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                       SizedBox(height: d.spaceM),
  
                       // ── Divider ───────────────────────
-                      buildDivider(d),
+                      buildDivider(d,'أو تابع مع'),
                   
  
                       // _buildAuthRow(d),

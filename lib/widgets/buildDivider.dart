@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/theme/theme.dart';
 
-Widget buildDivider(AppDimensions d) {
+Widget buildDivider(AppDimensions d,String text) {
     return Row(
       children: [
         const Expanded(
@@ -10,7 +10,7 @@ Widget buildDivider(AppDimensions d) {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: d.spaceS),
           child: Text(
-            'أو تابع مع',
+            text,
             style: TextStyle(
               color: AppColors.textHint,
               fontSize: d.fontS,
