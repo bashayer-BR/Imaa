@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:imaa/classes/GridItem.dart';
 import 'package:imaa/core/AppDim.dart';
+import 'package:imaa/core/app_routes.dart';
 
- Widget buildGrid(AppDimensions d) {
+ Widget buildGrid(AppDimensions d ,BuildContext context ) {
     final items = [
       GridItem(Icons.translate_rounded,    'ترجمة',  'إشارة ← نص',
           [const Color(0xFF00D4C8), const Color(0xFF0099CC)]),
@@ -21,13 +22,15 @@ import 'package:imaa/core/AppDim.dart';
       crossAxisSpacing: d.spaceM,
       mainAxisSpacing: d.spaceM,
       childAspectRatio: 1.23,
-      children: items.map((item) => buildGridCard(item, d)).toList(),
+      children: items.map((item) => buildGridCard(item, d,context)).toList(),
     );
   }
 
-  Widget buildGridCard(GridItem item, AppDimensions d) {
+  Widget buildGridCard(GridItem item, AppDimensions d , BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        AppRoutes.pushNamed(context, '/dictionary');
+      },
       child: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(

@@ -174,7 +174,7 @@ class _HomeContent extends StatelessWidget {
                   fontSize: d.fontL,
                   fontWeight: FontWeight.w800)),
           SizedBox(height: d.spaceM),
-          buildGrid(d),
+          buildGrid(d ,context),
           SizedBox(height: d.spaceL),
           Align(
             alignment: AlignmentGeometry.center,
