@@ -1,4 +1,6 @@
+
 import 'package:flutter/material.dart';
+import 'package:imaa/classes/Category.dart';
 import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/theme/theme.dart';
 
@@ -191,32 +193,32 @@ class _DictionaryScreenState extends State<DictionaryScreen> {
 
   Widget _buildCategoriesGrid(AppDimensions d) {
     final categories = [
-      _Category(
+      Dicategory(
         label: 'الأرقام',
         icon: Icons.tag_rounded,
         gradient: [const Color(0xFF00D4C8), const Color(0xFF0099CC)],
       ),
-      _Category(
+      Dicategory(
         label: 'العائلة',
         icon: Icons.family_restroom_rounded,
         gradient: [const Color(0xFF1DB954), const Color(0xFF0D7A37)],
       ),
-      _Category(
+      Dicategory(
         label: 'الحروف',
         icon: Icons.abc_rounded,
         gradient: [const Color(0xFF0099FF), const Color(0xFF005BB5)],
       ),
-      _Category(
+      Dicategory(
         label: 'العبارات اليومية',
         icon: Icons.chat_bubble_outline_rounded,
         gradient: [const Color(0xFF9B59B6), const Color(0xFF6C3483)],
       ),
-      _Category(
+      Dicategory(
         label: 'المشاعر',
         icon: Icons.emoji_emotions_outlined,
         gradient: [const Color(0xFFFF8C00), const Color(0xFFCC5500)],
       ),
-      _Category(
+      Dicategory(
         label: 'التعارف',
         icon: Icons.waving_hand_rounded,
         gradient: [const Color(0xFFE74C3C), const Color(0xFF922B21)],
@@ -234,7 +236,7 @@ class _DictionaryScreenState extends State<DictionaryScreen> {
     );
   }
 
-  Widget _buildCategoryCard(_Category cat, AppDimensions d) {
+  Widget _buildCategoryCard(Dicategory cat, AppDimensions d) {
     return GestureDetector(
       onTap: () {},
       child: Container(
@@ -388,16 +390,7 @@ class _DictionaryScreenState extends State<DictionaryScreen> {
 
 // ── Models ────────────────────────────────────────────────────
 
-class _Category {
-  final String label;
-  final IconData icon;
-  final List<Color> gradient;
-  const _Category({
-    required this.label,
-    required this.icon,
-    required this.gradient,
-  });
-}
+
 
 class _Word {
   final String arabic;
