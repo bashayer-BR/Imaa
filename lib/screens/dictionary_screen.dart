@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:imaa/classes/Category.dart';
+import 'package:imaa/classes/Word.dart';
 import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/theme/theme.dart';
 
@@ -293,12 +294,12 @@ class _DictionaryScreenState extends State<DictionaryScreen> {
 
   Widget _buildPopularWords(AppDimensions d) {
     final words = [
-      _Word(arabic: 'شكرًا',  english: 'Thank you', icon: Icons.sign_language_rounded),
-      _Word(arabic: 'نعم',    english: 'Yes',        icon: Icons.sign_language_rounded),
-      _Word(arabic: 'أهلاً',  english: 'Welcome',    icon: Icons.sign_language_rounded),
-      _Word(arabic: 'وداعًا', english: 'Goodbye',    icon: Icons.sign_language_rounded),
-      _Word(arabic: 'لا',     english: 'No',         icon: Icons.sign_language_rounded),
-      _Word(arabic: 'وداعًا', english: 'Goodbye',    icon: Icons.sign_language_rounded),
+      Word(arabic: 'شكرًا',  english: 'Thank you', icon: Icons.sign_language_rounded),
+      Word(arabic: 'نعم',    english: 'Yes',        icon: Icons.sign_language_rounded),
+      Word(arabic: 'أهلاً',  english: 'Welcome',    icon: Icons.sign_language_rounded),
+      Word(arabic: 'وداعًا', english: 'Goodbye',    icon: Icons.sign_language_rounded),
+      Word(arabic: 'لا',     english: 'No',         icon: Icons.sign_language_rounded),
+      Word(arabic: 'وداعًا', english: 'Goodbye',    icon: Icons.sign_language_rounded),
     ];
 
     return Container(
@@ -392,13 +393,3 @@ class _DictionaryScreenState extends State<DictionaryScreen> {
 
 
 
-class _Word {
-  final String arabic;
-  final String english;
-  final IconData icon;
-  const _Word({
-    required this.arabic,
-    required this.english,
-    required this.icon,
-  });
-}
