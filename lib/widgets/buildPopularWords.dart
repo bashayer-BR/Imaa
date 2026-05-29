@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:imaa/classes/Word.dart';
 import 'package:imaa/core/AppDim.dart';
+import 'package:imaa/core/theme/app_colors.dart';
 
 Widget buildPopularWords(AppDimensions d) {
     final words = [

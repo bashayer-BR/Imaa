@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 class Word {
   final String arabic;
   final String english;
