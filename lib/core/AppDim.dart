@@ -53,6 +53,7 @@ class AppDimensions {
   // ── Button sizes ──────────────────────────────────────────
   double get btnHeightPrimary => (screenH * 0.068).clamp(48.0, 58.0);
   double get btnHeightSecond  => (screenH * 0.060).clamp(44.0, 54.0);
+  double get btnHeightSmall => (screenH * 0.042).clamp(32.0, 40.0);
   double get btnRadius        => 30.0;
   double get btnFontSize      => fontM;
   double get btnIconSize      => (screenW * 0.050).clamp(16.0, 22.0);

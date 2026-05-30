@@ -6,13 +6,13 @@ import 'package:imaa/core/app_routes.dart';
  Widget buildGrid(AppDimensions d ,BuildContext context ) {
     final items = [
       GridItem(Icons.translate_rounded,    'ترجمة',  'إشارة ← نص',
-          [const Color(0xFF00D4C8), const Color(0xFF0099CC)],onTap: (){}),
+          [const Color(0xFF00D4C8), const Color(0xFF0099CC)],onTap: (){AppRoutes.pushNamed(context, AppRoutes.translate );}),
       GridItem(Icons.emoji_events_rounded, 'تحديات', 'اختبر نفسك',
-          [const Color(0xFF1DB954), const Color(0xFF0D7A37)],onTap: (){}),
+          [const Color(0xFF1DB954), const Color(0xFF0D7A37)],onTap: (){AppRoutes.pushNamed(context, AppRoutes.challenges);}),
       GridItem(Icons.sign_language_rounded,'قاموس',  'الإشارات',
           [const Color(0xFF0099FF), const Color(0xFF005BB5)],onTap: (){AppRoutes.pushNamed(context, '/dictionary');}),
       GridItem(Icons.menu_book_rounded,    'تعلّم',  'دروس يومية',
-          [const Color(0xFFFF8C00), const Color(0xFFCC5500)],onTap: (){}),
+          [const Color(0xFFFF8C00), const Color(0xFFCC5500)],onTap: (){AppRoutes.pushNamed(context, AppRoutes.learn);}),
     ];
 
     return GridView.count(
