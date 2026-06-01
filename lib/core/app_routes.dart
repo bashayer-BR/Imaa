@@ -5,8 +5,10 @@
 import 'package:flutter/material.dart';
 import 'package:imaa/screens/challenges_screen.dart';
 import 'package:imaa/screens/dictionary_screen.dart';
+import 'package:imaa/screens/explore_screen.dart';
 import 'package:imaa/screens/learn_screen.dart';
 import 'package:imaa/screens/profile_screen.dart';
+import 'package:imaa/screens/settings_screen.dart';
 import 'package:imaa/screens/translate_screen.dart';
 import '../screens/welcome_screen.dart';
 import '../screens/home_screen.dart';
@@ -23,6 +25,8 @@ class AppRoutes {
   static const String translate     = '/translate';
   static const String challenges     = '/challenges';
   static const String learn     = '/learn';
+  static const String explore     = '/explore';
+  static const String settings     = '/settings';
 
   // ── Route Map ─────────────────────────────────────────────
   static Map<String, WidgetBuilder> get routes => {
@@ -33,6 +37,9 @@ class AppRoutes {
     translate     : (_) => const TranslateScreen(),
     challenges    : (_) => const ChallengesScreen(),
     learn         : (_) => const LearnScreen(),
+    explore         : (_) => const ExploreScreen(),
+    settings         : (_) => const SettingsScreen(),
+    
 
   };
 

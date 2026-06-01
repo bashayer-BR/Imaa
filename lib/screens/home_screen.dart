@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/theme/theme.dart';
 import 'package:imaa/screens/PlaceholderPage.dart';
+import 'package:imaa/screens/challenges_screen.dart';
+import 'package:imaa/screens/explore_screen.dart';
 import 'package:imaa/screens/profile_screen.dart';
+import 'package:imaa/screens/settings_screen.dart';
 import 'package:imaa/widgets/buildCameraButton.dart';
 import 'package:imaa/widgets/buildDailySignCard.dart';
 import 'package:imaa/widgets/buildGrid.dart';
@@ -32,10 +35,10 @@ class _HomeScreenState extends State<HomeScreen>
 
     _pages = [
       _HomeContent(pulseCtrl: _pulseCtrl),
-      const PlaceholderPage(label: 'استكشف', icon: Icons.explore_rounded),
-      const PlaceholderPage(label: 'تحديات',   icon: Icons.emoji_events_rounded),
+      const ExploreScreen(),
+      const ChallengesScreen(),
       const ProfileScreen(),
-      const PlaceholderPage(label: 'الإعدادات', icon: Icons.settings_rounded),
+      const SettingsScreen(),
     ];
   }
 
