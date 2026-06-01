@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:imaa/classes/BestSign.dart';
 import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/theme/theme.dart';
 
@@ -233,9 +234,9 @@ class ExploreScreen extends StatelessWidget {
 
   Widget _buildBestSignsRow(AppDimensions d) {
     final signs = [
-      _BestSign('أفهم عميق', 'إشارة التفاهم'),
-      _BestSign('تحدي جديد', 'إشارة التحدي'),
-      _BestSign('فهم عميق',  'إشارة الفهم'),
+      BestSign('أفهم عميق', 'إشارة التفاهم'),
+      BestSign('تحدي جديد', 'إشارة التحدي'),
+      BestSign('فهم عميق',  'إشارة الفهم'),
     ];
 
     final cardW = (d.screenW * 0.32).clamp(105.0, 140.0);
@@ -299,7 +300,3 @@ class _Reference {
   const _Reference(this.label, this.icon, this.gradient);
 }
 
-class _BestSign {
-  final String label, sublabel;
-  const _BestSign(this.label, this.sublabel);
-}
