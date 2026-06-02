@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:imaa/classes/BestSign.dart';
+import 'package:imaa/classes/Reference.dart';
 import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/theme/theme.dart';
 
@@ -190,8 +191,8 @@ class ExploreScreen extends StatelessWidget {
 
   Widget _buildReferenceGrid(AppDimensions d) {
     final refs = [
-      _Reference('تراكيب القواعد',     Icons.account_tree_rounded,  [const Color(0xFF1DB954), const Color(0xFF0D7A37)]),
-      _Reference('المفردات التخصصية', Icons.library_books_rounded,  [const Color(0xFF0099FF), const Color(0xFF005BB5)]),
+      Reference('تراكيب القواعد',     Icons.account_tree_rounded,  [const Color(0xFF1DB954), const Color(0xFF0D7A37)]),
+      Reference('المفردات التخصصية', Icons.library_books_rounded,  [const Color(0xFF0099FF), const Color(0xFF005BB5)]),
     ];
 
     return Row(
@@ -293,10 +294,5 @@ class _Lesson {
   const _Lesson(this.number, this.title, this.icon, this.gradient);
 }
 
-class _Reference {
-  final String label;
-  final IconData icon;
-  final List<Color> gradient;
-  const _Reference(this.label, this.icon, this.gradient);
-}
+
 
