@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:imaa/classes/BestSign.dart';
+import 'package:imaa/classes/Lesson.dart';
 import 'package:imaa/classes/Reference.dart';
 import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/theme/theme.dart';
@@ -131,10 +132,10 @@ class ExploreScreen extends StatelessWidget {
 
   Widget _buildLessonsRow(AppDimensions d) {
     final lessons = [
-      _Lesson('1', 'إيماءات المشاعر الدقيقة',        Icons.sentiment_satisfied_alt_rounded, [const Color(0xFF00D4C8), const Color(0xFF0099CC)]),
-      _Lesson('2', 'الإشارات الانطباطية الشائعة',    Icons.sign_language_rounded,           [const Color(0xFF0099FF), const Color(0xFF005BB5)]),
-      _Lesson('3', 'حكي القصص بالإشارة',              Icons.menu_book_rounded,               [const Color(0xFF9B59B6), const Color(0xFF6C3483)]),
-      _Lesson('4', 'التعبيرات اليومية',               Icons.wb_sunny_outlined,               [const Color(0xFFFF8C00), const Color(0xFFCC5500)]),
+      Lesson('1', 'إيماءات المشاعر الدقيقة',        Icons.sentiment_satisfied_alt_rounded, [const Color(0xFF00D4C8), const Color(0xFF0099CC)]),
+      Lesson('2', 'الإشارات الانطباطية الشائعة',    Icons.sign_language_rounded,           [const Color(0xFF0099FF), const Color(0xFF005BB5)]),
+      Lesson('3', 'حكي القصص بالإشارة',              Icons.menu_book_rounded,               [const Color(0xFF9B59B6), const Color(0xFF6C3483)]),
+      Lesson('4', 'التعبيرات اليومية',               Icons.wb_sunny_outlined,               [const Color(0xFFFF8C00), const Color(0xFFCC5500)]),
     ];
 
     final cardW = (d.screenW * 0.36).clamp(120.0, 155.0);
@@ -287,12 +288,7 @@ class ExploreScreen extends StatelessWidget {
   }
 }
 
-class _Lesson {
-  final String number, title;
-  final IconData icon;
-  final List<Color> gradient;
-  const _Lesson(this.number, this.title, this.icon, this.gradient);
-}
+
 
 
 
