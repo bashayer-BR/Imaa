@@ -7,6 +7,7 @@ import 'package:imaa/core/theme/theme.dart';
 import 'package:imaa/widgets/buildBestSignsRow.dart';
 import 'package:imaa/widgets/buildLessonsRow.dart';
 import 'package:imaa/widgets/buildReferenceGrid.dart';
+import 'package:imaa/widgets/buildSectionLabel.dart';
 
 class ExploreScreen extends StatelessWidget {
   const ExploreScreen({super.key});
@@ -28,15 +29,15 @@ class ExploreScreen extends StatelessWidget {
             SizedBox(height: d.spaceL),
             _buildLevelCard(d),
             SizedBox(height: d.spaceL),
-            _buildSectionLabel(d, 'الدروس المتاحة', null),
+            buildSectionLabel(d, 'الدروس المتاحة', null),
             SizedBox(height: d.spaceM),
             buildLessonsRow(d),
             SizedBox(height: d.spaceL),
-            _buildSectionLabel(d, 'مكتبة المراجع السريعة', null),
+            buildSectionLabel(d, 'مكتبة المراجع السريعة', null),
             SizedBox(height: d.spaceM),
             buildReferenceGrid(d),
             SizedBox(height: d.spaceL),
-            _buildSectionLabel(d, 'أفضل إشارات المستخدمين', 'اكتشف المزيد'),
+            buildSectionLabel(d, 'أفضل إشارات المستخدمين', 'اكتشف المزيد'),
             SizedBox(height: d.spaceM),
             buildBestSignsRow(d),
             SizedBox(height: d.spaceXL),
@@ -119,19 +120,7 @@ class ExploreScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildSectionLabel(AppDimensions d, String title, String? action) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(title, style: TextStyle(color: AppColors.textPrimary, fontSize: d.fontL, fontWeight: FontWeight.w800)),
-        if (action != null)
-          GestureDetector(
-            onTap: () {},
-            child: Text(action, style: TextStyle(color: AppColors.primary, fontSize: d.fontS, fontWeight: FontWeight.w600)),
-          ),
-      ],
-    );
-  }
+  
 }
 
 
