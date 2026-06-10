@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:imaa/classes/Avatar.dart';
 import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/theme/theme.dart';
 import 'package:imaa/widgets/teal_press_button.dart';
@@ -363,9 +364,9 @@ class ChallengesScreen extends StatelessWidget {
             height: 72,
             child: Stack(
               children: [
-                _Avatar(color: const Color(0xFF00D4C8), top: 0,  left: 0),
-                _Avatar(color: const Color(0xFF0099FF), top: 0,  left: 20),
-                _Avatar(color: const Color(0xFFFF8C00), top: 20, left: 10),
+                Avatar(color: const Color(0xFF00D4C8), top: 0,  left: 0),
+                Avatar(color: const Color(0xFF0099FF), top: 0,  left: 20),
+                Avatar(color: const Color(0xFFFF8C00), top: 20, left: 10),
                 // count badge
                 Positioned(
                   bottom: 0,
@@ -520,33 +521,3 @@ class _TagRow extends StatelessWidget {
 // ══════════════════════════════════════════════════════════════
 //  _Avatar  –  دائرة ملونة للمجموعة
 // ══════════════════════════════════════════════════════════════
-
-class _Avatar extends StatelessWidget {
-  final Color color;
-  final double top;
-  final double left;
-
-  const _Avatar({
-    required this.color,
-    required this.top,
-    required this.left,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Positioned(
-      top: top,
-      left: left,
-      child: Container(
-        width: 32,
-        height: 32,
-        decoration: BoxDecoration(
-          color: color,
-          shape: BoxShape.circle,
-          border: Border.all(color: AppColors.bgCard, width: 2),
-        ),
-        child: const Icon(Icons.person, color: Colors.white, size: 16),
-      ),
-    );
-  }
-}
