@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/theme/theme.dart';
 import 'package:imaa/widgets/buildEmptyState.dart';
+import 'package:imaa/widgets/buildVideoCard.dart';
 import 'package:imaa/widgets/teal_press_button.dart';
 
 class TranslateScreen extends StatefulWidget {
@@ -101,7 +102,7 @@ class _TranslateScreenState extends State<TranslateScreen>
                   if (_hasResult) ...[
                     _buildResultLabel(d),
                     SizedBox(height: d.spaceM),
-                    _buildVideoCard(d),
+                    buildVideoCard(d, _isPlaying,_pulseCtrl,_onPlay),
                     SizedBox(height: d.spaceM),
                     _buildTranslationInfo(d),
                   ] else
