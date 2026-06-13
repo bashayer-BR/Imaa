@@ -3,6 +3,7 @@
 // ============================================================
 
 import 'package:flutter/material.dart';
+import 'package:imaa/screens/camera_screen.dart';
 import 'package:imaa/screens/challenges_screen.dart';
 import 'package:imaa/screens/dictionary_screen.dart';
 import 'package:imaa/screens/explore_screen.dart';
@@ -27,6 +28,8 @@ class AppRoutes {
   static const String learn     = '/learn';
   static const String explore     = '/explore';
   static const String settings     = '/settings';
+  static const String camera     = '/camera';
+
 
   // ── Route Map ─────────────────────────────────────────────
   static Map<String, WidgetBuilder> get routes => {
@@ -39,6 +42,7 @@ class AppRoutes {
     learn         : (_) => const LearnScreen(),
     explore         : (_) => const ExploreScreen(),
     settings         : (_) => const SettingsScreen(),
+    camera         : (_) => const CameraScreen(),
     
 
   };

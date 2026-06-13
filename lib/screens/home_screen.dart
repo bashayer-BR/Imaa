@@ -181,7 +181,7 @@ class _HomeContent extends StatelessWidget {
           SizedBox(height: d.spaceL),
           Align(
             alignment: AlignmentGeometry.center,
-            child: buildCameraButton(d, pulseCtrl)),
+            child: buildCameraButton(d, pulseCtrl,context)),
           SizedBox(height: d.spaceL),
           buildDailySignCard(d),
           SizedBox(height: d.spaceL),

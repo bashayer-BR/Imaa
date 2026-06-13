@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:imaa/core/AppDim.dart';
+import 'package:imaa/core/app_routes.dart';
 import 'package:imaa/core/theme/app_colors.dart';
-Widget buildCameraButton(AppDimensions d,AnimationController pulseCtrl) {
+Widget buildCameraButton(AppDimensions d,AnimationController pulseCtrl, BuildContext context) {
     return Column(
       children: [
         AnimatedBuilder(
@@ -19,7 +20,9 @@ Widget buildCameraButton(AppDimensions d,AnimationController pulseCtrl) {
               ],
             ),
             child: GestureDetector(
-              onTap: () {},
+              onTap: () {
+                 Navigator.pushNamed(context, AppRoutes.camera);
+              },
               child: Container(
                 width: 70,
                 height: 70,
