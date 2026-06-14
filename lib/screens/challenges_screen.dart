@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:imaa/classes/Avatar.dart';
+import 'package:imaa/classes/TagRow.dart';
 import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/theme/theme.dart';
 import 'package:imaa/widgets/teal_press_button.dart';
@@ -163,7 +164,7 @@ class ChallengesScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: d.spaceXS),
-                _TagRow(d: d, tags: ['تعلم 5 إشارات عائلية', 'صداقة']),
+                TagRow(d: d, tags: ['تعلم 5 إشارات عائلية', 'صداقة']),
                 SizedBox(height: d.spaceM),
                 TealPressButton(
                   onTap: () {},
@@ -322,7 +323,7 @@ class ChallengesScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: d.spaceXS),
-                _TagRow(d: d, tags: ['سهل', 'متوسط', 'محال']),
+                TagRow(d: d, tags: ['سهل', 'متوسط', 'محال']),
                 SizedBox(height: d.spaceM),
                 TealPressButton(
                   onTap: () {},
@@ -481,42 +482,7 @@ class _ChallengeCard extends StatelessWidget {
 //  _TagRow  –  صفوف التاقات الصغيرة
 // ══════════════════════════════════════════════════════════════
 
-class _TagRow extends StatelessWidget {
-  final AppDimensions d;
-  final List<String> tags;
 
-  const _TagRow({required this.d, required this.tags});
-
-  @override
-  Widget build(BuildContext context) {
-    return Wrap(
-      spacing: d.spaceXS,
-      runSpacing: d.spaceXS,
-      children: tags
-          .map(
-            (t) => Container(
-              padding: EdgeInsets.symmetric(
-                horizontal: d.spaceS,
-                vertical: 3,
-              ),
-              decoration: BoxDecoration(
-                color: AppColors.bgSurface,
-                borderRadius: BorderRadius.circular(d.radiusXL),
-                border: Border.all(color: AppColors.divider),
-              ),
-              child: Text(
-                t,
-                style: TextStyle(
-                  color: AppColors.textSecondary,
-                  fontSize: d.fontXS,
-                ),
-              ),
-            ),
-          )
-          .toList(),
-    );
-  }
-}
 
 // ══════════════════════════════════════════════════════════════
 //  _Avatar  –  دائرة ملونة للمجموعة
