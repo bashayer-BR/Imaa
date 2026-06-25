@@ -22,3 +22,12 @@ Widget buildDivider(AppDimensions d,String text) {
       ],
     );
   }
+
+  Widget buildSampleDivider() {
+    return const Divider(
+      color: AppColors.divider,
+      height: 1,
+      indent: 16,
+      endIndent: 16,
+    );
+  }

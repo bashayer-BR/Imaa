@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/theme/theme.dart';
 import 'package:imaa/widgets/SmallButton.dart';
+import 'package:imaa/widgets/buildDivider.dart';
 import 'package:imaa/widgets/buildLogoutButton.dart';
-import 'package:imaa/widgets/teal_press_button.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -47,9 +47,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
               icon: Icons.notifications_outlined,
               children: [
                 _buildToggleRow(d, 'إشعارات الدروس',      _notifyLessons,     (v) => setState(() => _notifyLessons = v)),
-                _buildDivider(),
+                buildSampleDivider(),
                 _buildToggleRow(d, 'العروض والتحديات',     _notifyOffers,      (v) => setState(() => _notifyOffers = v)),
-                _buildDivider(),
+                buildSampleDivider(),
                 _buildToggleRow(d, 'المنافسات',            _notifyCompetition, (v) => setState(() => _notifyCompetition = v)),
               ],
             ),
@@ -73,7 +73,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               icon: Icons.palette_outlined,
               children: [
                 _buildToggleRow(d, 'الوضع الليلي', _darkMode, (v) => setState(() => _darkMode = v)),
-                _buildDivider(),
+                buildSampleDivider(),
                 _buildColorPicker(d),
               ],
             ),
@@ -86,15 +86,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
               icon: Icons.shield_outlined,
               children: [
                 _buildArrowRow(d, Icons.lock_outline_rounded,      'الأمان',              '',  () {}),
-                _buildDivider(),
+                buildSampleDivider(),
                 _buildArrowRow(d, Icons.storage_outlined,          'إدارة البيانات',      '',  () {}),
-                _buildDivider(),
+                buildSampleDivider(),
                 _buildArrowRow(d, Icons.help_outline_rounded,      'المساعدة',            '',  () {}),
-                _buildDivider(),
+                buildSampleDivider(),
                 _buildArrowRow(d, Icons.mail_outline_rounded,      'اتصل بنا',            '',  () {}),
-                _buildDivider(),
+                buildSampleDivider(),
                 _buildArrowRow(d, Icons.privacy_tip_outlined,      'سياسة الخصوصية',     '',  () {}),
-                _buildDivider(),
+                buildSampleDivider(),
                 _buildArrowRow(d, Icons.info_outline_rounded,      'حول SignTranslate',   '',  () {}),
               ],
             ),
@@ -381,18 +381,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     );
   }
 
-  // ── Divider ───────────────────────────────────────────────
-
-  Widget _buildDivider() {
-    return const Divider(
-      color: AppColors.divider,
-      height: 1,
-      indent: 16,
-      endIndent: 16,
-    );
-  }
-
-  // ── Logout button ─────────────────────────────────────────
+  
 
   
 }
