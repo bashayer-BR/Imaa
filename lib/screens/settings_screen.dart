@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/theme/theme.dart';
 import 'package:imaa/widgets/SmallButton.dart';
+import 'package:imaa/widgets/buildArrowRow.dart';
 import 'package:imaa/widgets/buildColorPicker.dart';
 import 'package:imaa/widgets/buildDivider.dart';
 import 'package:imaa/widgets/buildLogoutButton.dart';
@@ -62,7 +63,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               title: 'اللغة والمنطقة',
               icon: Icons.language_rounded,
               children: [
-                _buildArrowRow(d, Icons.map_outlined, 'اللغة', 'العربية (السعودية)', () {}),
+                buildArrowRow(d, Icons.map_outlined, 'اللغة', 'العربية (السعودية)', () {}),
               ],
             ),
             SizedBox(height: d.spaceM),
@@ -86,17 +87,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
               title: 'الدعم والخصوصية',
               icon: Icons.shield_outlined,
               children: [
-                _buildArrowRow(d, Icons.lock_outline_rounded,      'الأمان',              '',  () {}),
+                buildArrowRow(d, Icons.lock_outline_rounded,      'الأمان',              '',  () {}),
                 buildSampleDivider(),
-                _buildArrowRow(d, Icons.storage_outlined,          'إدارة البيانات',      '',  () {}),
+                buildArrowRow(d, Icons.storage_outlined,          'إدارة البيانات',      '',  () {}),
                 buildSampleDivider(),
-                _buildArrowRow(d, Icons.help_outline_rounded,      'المساعدة',            '',  () {}),
+                buildArrowRow(d, Icons.help_outline_rounded,      'المساعدة',            '',  () {}),
                 buildSampleDivider(),
-                _buildArrowRow(d, Icons.mail_outline_rounded,      'اتصل بنا',            '',  () {}),
+                buildArrowRow(d, Icons.mail_outline_rounded,      'اتصل بنا',            '',  () {}),
                 buildSampleDivider(),
-                _buildArrowRow(d, Icons.privacy_tip_outlined,      'سياسة الخصوصية',     '',  () {}),
+                buildArrowRow(d, Icons.privacy_tip_outlined,      'سياسة الخصوصية',     '',  () {}),
                 buildSampleDivider(),
-                _buildArrowRow(d, Icons.info_outline_rounded,      'حول SignTranslate',   '',  () {}),
+                buildArrowRow(d, Icons.info_outline_rounded,      'حول SignTranslate',   '',  () {}),
               ],
             ),
             SizedBox(height: d.spaceL),
@@ -277,63 +278,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ],
       ),
     );
-  }
-
-  // ── Arrow row ─────────────────────────────────────────────
-
-  Widget _buildArrowRow(
-    AppDimensions d,
-    IconData icon,
-    String label,
-    String subtitle,
-    VoidCallback onTap,
-  ) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: d.spaceM, vertical: d.spaceM),
-        child: Row(
-          children: [
-            Container(
-              width: 34,
-              height: 34,
-              decoration: BoxDecoration(
-                color: AppColors.glowTeal,
-                borderRadius: BorderRadius.circular(d.radiusS),
-              ),
-              child: Icon(icon, color: AppColors.primary, size: d.iconS),
-            ),
-            SizedBox(width: d.spaceM),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    label,
-                    style: TextStyle(
-                      color: AppColors.textSecondary,
-                      fontSize: d.fontM,
-                    ),
-                  ),
-                  if (subtitle.isNotEmpty)
-                    Text(
-                      subtitle,
-                      style: TextStyle(
-                        color: AppColors.primary,
-                        fontSize: d.fontXS,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                ],
-              ),
-            ),
-            const Icon(Icons.arrow_back_ios_new_rounded,
-                color: AppColors.textHint, size: 14),
-          ],
-        ),
-      ),
-    );
-  }
+  }  
 }
 
 
