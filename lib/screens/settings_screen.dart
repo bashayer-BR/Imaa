@@ -6,6 +6,7 @@ import 'package:imaa/widgets/buildArrowRow.dart';
 import 'package:imaa/widgets/buildColorPicker.dart';
 import 'package:imaa/widgets/buildDivider.dart';
 import 'package:imaa/widgets/buildLogoutButton.dart';
+import 'package:imaa/widgets/buildToggleRow.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -48,11 +49,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
               title: 'تفضيلات التنبيهات',
               icon: Icons.notifications_outlined,
               children: [
-                _buildToggleRow(d, 'إشعارات الدروس',      _notifyLessons,     (v) => setState(() => _notifyLessons = v)),
+                buildToggleRow(d, 'إشعارات الدروس',      _notifyLessons,     (v) => setState(() => _notifyLessons = v)),
                 buildSampleDivider(),
-                _buildToggleRow(d, 'العروض والتحديات',     _notifyOffers,      (v) => setState(() => _notifyOffers = v)),
+                buildToggleRow(d, 'العروض والتحديات',     _notifyOffers,      (v) => setState(() => _notifyOffers = v)),
                 buildSampleDivider(),
-                _buildToggleRow(d, 'المنافسات',            _notifyCompetition, (v) => setState(() => _notifyCompetition = v)),
+                buildToggleRow(d, 'المنافسات',            _notifyCompetition, (v) => setState(() => _notifyCompetition = v)),
               ],
             ),
             SizedBox(height: d.spaceM),
@@ -74,7 +75,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               title: 'المظهر والتصميم',
               icon: Icons.palette_outlined,
               children: [
-                _buildToggleRow(d, 'الوضع الليلي', _darkMode, (v) => setState(() => _darkMode = v)),
+                buildToggleRow(d, 'الوضع الليلي', _darkMode, (v) => setState(() => _darkMode = v)),
                 buildSampleDivider(),
                 buildColorPicker(d),
               ],
@@ -249,36 +250,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
       ],
     );
   }
-
-  // ── Toggle row ────────────────────────────────────────────
-
-  Widget _buildToggleRow(
-    AppDimensions d,
-    String label,
-    bool value,
-    ValueChanged<bool> onChanged,
-  ) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: d.spaceM, vertical: d.spaceS),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            label,
-            style: TextStyle(color: AppColors.textSecondary, fontSize: d.fontM),
-          ),
-          Switch(
-            value: value,
-            onChanged: onChanged,
-            activeColor: AppColors.primary,
-            activeTrackColor: AppColors.primary.withOpacity(0.3),
-            inactiveThumbColor: AppColors.textHint,
-            inactiveTrackColor: AppColors.bgSurface,
-          ),
-        ],
-      ),
-    );
-  }  
 }
 
 
