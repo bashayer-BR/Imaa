@@ -6,6 +6,7 @@ import 'package:imaa/widgets/buildArrowRow.dart';
 import 'package:imaa/widgets/buildColorPicker.dart';
 import 'package:imaa/widgets/buildDivider.dart';
 import 'package:imaa/widgets/buildLogoutButton.dart';
+import 'package:imaa/widgets/buildSection.dart';
 import 'package:imaa/widgets/buildToggleRow.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -44,7 +45,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             SizedBox(height: d.spaceL),
 
             // ── Notifications ──────────────────────────
-            _buildSection(
+            buildSection(
               d,
               title: 'تفضيلات التنبيهات',
               icon: Icons.notifications_outlined,
@@ -59,7 +60,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             SizedBox(height: d.spaceM),
 
             // ── Language ───────────────────────────────
-            _buildSection(
+            buildSection(
               d,
               title: 'اللغة والمنطقة',
               icon: Icons.language_rounded,
@@ -70,7 +71,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             SizedBox(height: d.spaceM),
 
             // ── Appearance ─────────────────────────────
-            _buildSection(
+            buildSection(
               d,
               title: 'المظهر والتصميم',
               icon: Icons.palette_outlined,
@@ -83,7 +84,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             SizedBox(height: d.spaceM),
 
             // ── Privacy ────────────────────────────────
-            _buildSection(
+            buildSection(
               d,
               title: 'الدعم والخصوصية',
               icon: Icons.shield_outlined,
@@ -211,45 +212,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
   }
 
   // ── Section container ─────────────────────────────────────
-
-  Widget _buildSection(
-    AppDimensions d, {
-    required String title,
-    required IconData icon,
-    required List<Widget> children,
-  }) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        // Section title
-        Row(
-          children: [
-            Icon(icon, color: AppColors.primary, size: d.iconS),
-            SizedBox(width: d.spaceS),
-            Text(
-              title,
-              style: TextStyle(
-                color: AppColors.textPrimary,
-                fontSize: d.fontM,
-                fontWeight: FontWeight.w800,
-              ),
-            ),
-          ],
-        ),
-        SizedBox(height: d.spaceS),
-
-        // Content card
-        Container(
-          decoration: BoxDecoration(
-            color: AppColors.bgCard,
-            borderRadius: BorderRadius.circular(d.radiusL),
-            border: Border.all(color: AppColors.divider),
-          ),
-          child: Column(children: children),
-        ),
-      ],
-    );
-  }
 }
 
 
