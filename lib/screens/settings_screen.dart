@@ -125,12 +125,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
       ),
     );
   }
-
-  // ── Profile card ─────────────────────────────────────────
-
-  
-
-  // ── Section container ─────────────────────────────────────
 }
 
 
