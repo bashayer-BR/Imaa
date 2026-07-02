@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/theme/theme.dart';
 import 'package:imaa/widgets/buildEmptyState.dart';
+import 'package:imaa/widgets/buildResultLabel.dart';
 import 'package:imaa/widgets/buildTranslationInfo.dart';
 import 'package:imaa/widgets/buildVideoCard.dart';
 import 'package:imaa/widgets/teal_press_button.dart';
@@ -101,7 +102,7 @@ class _TranslateScreenState extends State<TranslateScreen>
       
                   // ── Result section ─────────────────────
                   if (_hasResult) ...[
-                    _buildResultLabel(d),
+                    buildResultLabel(d),
                     SizedBox(height: d.spaceM),
                     buildVideoCard(d, _isPlaying,_pulseCtrl,_onPlay),
                     SizedBox(height: d.spaceM),
@@ -292,183 +293,6 @@ class _TranslateScreenState extends State<TranslateScreen>
                   ],
                 ),
               ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  // ── Result label ─────────────────────────────────────────
-
-  Widget _buildResultLabel(AppDimensions d) {
-    return Row(
-      children: [
-        Container(
-          width: 3,
-          height: 20,
-          decoration: BoxDecoration(
-            color: AppColors.primary,
-            borderRadius: BorderRadius.circular(2),
-          ),
-        ),
-        SizedBox(width: d.spaceS),
-        Text(
-          'نتيجة الترجمة',
-          style: TextStyle(
-            color: AppColors.textPrimary,
-            fontSize: d.fontL,
-            fontWeight: FontWeight.w800,
-          ),
-        ),
-      ],
-    );
-  }
-
-  // ── Video card ───────────────────────────────────────────
-
-  Widget _buildVideoCard(AppDimensions d) {
-    final cardH = d.screenW * 0.55;
-    return Container(
-      width: double.infinity,
-      height: cardH,
-      decoration: BoxDecoration(
-        color: AppColors.bgCard,
-        borderRadius: BorderRadius.circular(d.radiusL),
-        border: Border.all(color: AppColors.divider),
-      ),
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          // Background gradient
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(d.radiusL),
-              gradient: LinearGradient(
-                colors: [
-                  AppColors.primary.withOpacity(0.08),
-                  const Color(0xFF0099FF).withOpacity(0.06),
-                ],
-                begin: Alignment.topRight,
-                end: Alignment.bottomLeft,
-              ),
-            ),
-          ),
-
-          // Avatar placeholder
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                width: cardH * 0.55,
-                height: cardH * 0.55,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: AppColors.bgSurface,
-                  border: Border.all(
-                    color: AppColors.primary.withOpacity(0.3),
-                    width: 2,
-                  ),
-                ),
-                child: Icon(
-                  Icons.sign_language_rounded,
-                  color: AppColors.primary.withOpacity(0.5),
-                  size: cardH * 0.22,
-                ),
-              ),
-            ],
-          ),
-
-          // Play button
-          AnimatedBuilder(
-            animation: _pulseCtrl,
-            builder: (_, __) => GestureDetector(
-              onTap: _onPlay,
-              child: Container(
-                width: 56,
-                height: 56,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  gradient: const LinearGradient(
-                    colors: AppColors.primaryGradient,
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: AppColors.primary.withOpacity(
-                          0.4 + 0.3 * _pulseCtrl.value),
-                      blurRadius: 14 + 6 * _pulseCtrl.value,
-                      spreadRadius: 1 + 2 * _pulseCtrl.value,
-                    ),
-                  ],
-                ),
-                child: Icon(
-                  _isPlaying
-                      ? Icons.pause_rounded
-                      : Icons.play_arrow_rounded,
-                  color: Colors.white,
-                  size: 30,
-                ),
-              ),
-            ),
-          ),
-
-          // Speed control
-          Positioned(
-            bottom: d.spaceM,
-            left: d.spaceM,
-            child: GestureDetector(
-              onTap: () {},
-              child: Container(
-                padding: EdgeInsets.symmetric(
-                  horizontal: d.spaceS,
-                  vertical: d.spaceXS,
-                ),
-                decoration: BoxDecoration(
-                  color: AppColors.bgDark.withOpacity(0.8),
-                  borderRadius: BorderRadius.circular(d.radiusXL),
-                  border: Border.all(
-                      color: AppColors.primary.withOpacity(0.4)),
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(Icons.speed_rounded,
-                        color: AppColors.primary, size: 14),
-                    SizedBox(width: d.spaceXS),
-                    Text(
-                      '1x',
-                      style: TextStyle(
-                        color: AppColors.primary,
-                        fontSize: d.fontXS,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-
-          // Repeat button
-          Positioned(
-            bottom: d.spaceM,
-            right: d.spaceM,
-            child: GestureDetector(
-              onTap: () {},
-              child: Container(
-                padding: const EdgeInsets.all(6),
-                decoration: BoxDecoration(
-                  color: AppColors.bgDark.withOpacity(0.8),
-                  borderRadius: BorderRadius.circular(d.radiusS),
-                  border: Border.all(
-                      color: AppColors.divider),
-                ),
-                child: Icon(
-                  Icons.replay_rounded,
-                  color: AppColors.textSecondary,
-                  size: d.iconS,
-                ),
-              ),
             ),
           ),
         ],
