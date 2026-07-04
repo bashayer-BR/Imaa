@@ -7,6 +7,7 @@ import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/app_routes.dart';
 import 'package:imaa/core/theme/theme.dart';
 import 'package:imaa/widgets/buildDivider.dart';
+import 'package:imaa/widgets/buildHandIllustration.dart';
 import 'package:imaa/widgets/buildLoginLink.dart';
 import 'package:imaa/widgets/buildSocialAuthButtons.dart';
 import 'package:imaa/widgets/buildTagline.dart';
@@ -86,7 +87,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                       SizedBox(height: d.spaceL),
  
                       // ── Hand image ────────────────────
-                      _buildHandIllustration(d),
+                      buildHandIllustration(d,_pulseCtrl),
                       SizedBox(height: d.spaceL),
  
                       // ── Tagline ───────────────────────
@@ -207,41 +208,6 @@ class _WelcomeScreenState extends State<WelcomeScreen>
  
   // ── Hand illustration ─────────────────────────────────────
  
-  Widget _buildHandIllustration(AppDimensions d) {
-    return AnimatedBuilder(
-      animation: _pulseCtrl,
-      builder: (_, __) {
-        final glow = 0.4 + 0.6 * _pulseCtrl.value;
-        return Container(
-          width: d.illustSize,
-          height: d.illustSize,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            boxShadow: [
-              BoxShadow(
-                color: AppColors.primary.withOpacity(0.18 * glow),
-                blurRadius: 50,
-                spreadRadius: 15,
-              ),
-              BoxShadow(
-                color: const Color(0xFF0099FF).withOpacity(0.10 * glow),
-                blurRadius: 30,
-                spreadRadius: 8,
-              ),
-            ],
-          ),
-          // هنا في مشكلة في لصورة راجعيها
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(d.illustSize * 0.15),
-            child: Image.asset(
-              'assets/images/imaa_logoo.png',
-              fit: BoxFit.cover,
-              filterQuality: FilterQuality.high,
-            ),
-          ),
-        );
-      },
-    );
-  }  
+  
 }
  
