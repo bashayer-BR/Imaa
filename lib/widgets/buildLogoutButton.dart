@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:imaa/core/AppDim.dart';
-import 'package:imaa/widgets/Teal_press_button.dart';
+import 'package:imaa/widgets/Buttons.dart';
 Widget buildLogoutButton(AppDimensions d) {
     return TealPressButton(
       onTap: () {},

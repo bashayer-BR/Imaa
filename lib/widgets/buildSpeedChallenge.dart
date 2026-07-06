@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/theme/app_colors.dart';
+import 'package:imaa/widgets/Buttons.dart';
 import 'package:imaa/widgets/ChallengeCard.dart';
-import 'package:imaa/widgets/Teal_press_button.dart';
 Widget buildSpeedChallenge(AppDimensions d) {
     return ChallengeCard(
       d: d,

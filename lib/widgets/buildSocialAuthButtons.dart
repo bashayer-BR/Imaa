@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/theme/theme.dart';
-import 'package:imaa/widgets/teal_press_button.dart';
+import 'package:imaa/widgets/Buttons.dart';
 
 class BuildSocialButton extends StatelessWidget {
   final VoidCallback onTap;
