@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/theme/theme.dart';
+import 'package:imaa/widgets/Buttons.dart';
 import 'package:imaa/widgets/buildAvatar.dart';
 import 'package:imaa/widgets/buildDivider.dart';
 import 'package:imaa/widgets/buildFeaturesList.dart';
-import 'package:imaa/widgets/buildSocialAuthButtons.dart';
 import 'package:imaa/widgets/buildTopBar.dart';
  
 class ProfileScreen extends StatelessWidget {

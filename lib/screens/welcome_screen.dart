@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/app_routes.dart';
 import 'package:imaa/core/theme/theme.dart';
+import 'package:imaa/widgets/Buttons.dart';
 import 'package:imaa/widgets/buildDivider.dart';
 import 'package:imaa/widgets/buildHandIllustration.dart';
 import 'package:imaa/widgets/buildLoginLink.dart';
-import 'package:imaa/widgets/buildSocialAuthButtons.dart';
 import 'package:imaa/widgets/buildTagline.dart';
  
 class WelcomeScreen extends StatefulWidget {

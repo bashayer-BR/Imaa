@@ -192,7 +192,6 @@ class _DictionaryScreenState extends State<DictionaryScreen> {
   }
 }
 
-// ── Models ────────────────────────────────────────────────────
 
 
 
