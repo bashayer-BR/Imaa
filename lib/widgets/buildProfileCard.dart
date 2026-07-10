@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/theme/app_colors.dart';
-import 'package:imaa/widgets/SmallButton.dart';
+import 'package:imaa/widgets/Buttons.dart';
 Widget buildProfileCard(AppDimensions d) {
     return Container(
       padding: EdgeInsets.all(d.spaceM),

@@ -204,10 +204,6 @@ class _WelcomeScreenState extends State<WelcomeScreen>
         ),
       ],
     );
-  }
- 
-  // ── Hand illustration ─────────────────────────────────────
- 
-  
+  }    
 }
  
