@@ -3,7 +3,7 @@ import 'package:imaa/classes/Avatar.dart';
 import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/theme/app_colors.dart';
 import 'package:imaa/widgets/Buttons.dart';
-import 'package:imaa/widgets/ChallengeCard.dart';
+import 'package:imaa/widgets/cards.dart';
 Widget buildGroupChallenge(AppDimensions d) {
     return ChallengeCard(
       d: d,
