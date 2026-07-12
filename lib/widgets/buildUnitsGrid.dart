@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:imaa/classes/Unit.dart';
 import 'package:imaa/core/AppDim.dart';
-import 'package:imaa/widgets/buildUnitCard.dart';
+import 'package:imaa/widgets/cards.dart';
 Widget buildUnitsGrid(AppDimensions d) {
     final units = [
       Unit(

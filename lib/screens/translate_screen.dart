@@ -6,7 +6,7 @@ import 'package:imaa/widgets/buildEmptyState.dart';
 import 'package:imaa/widgets/buildInputCard.dart';
 import 'package:imaa/widgets/buildResultLabel.dart';
 import 'package:imaa/widgets/buildTranslationInfo.dart';
-import 'package:imaa/widgets/buildVideoCard.dart';
+import 'package:imaa/widgets/cards.dart';
 
 class TranslateScreen extends StatefulWidget {
   const TranslateScreen({super.key});
