@@ -10,7 +10,7 @@ import 'package:imaa/widgets/buildBottomNav.dart';
 import 'package:imaa/widgets/buildDailySignCard.dart';
 import 'package:imaa/widgets/buildGrid.dart';
 import 'package:imaa/widgets/buildHeader.dart';
-import 'package:imaa/widgets/buildProgressCard.dart';
+import 'package:imaa/widgets/cards.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
