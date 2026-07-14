@@ -5,9 +5,9 @@ import 'package:imaa/widgets/Buttons.dart';
 import 'package:imaa/widgets/buildArrowRow.dart';
 import 'package:imaa/widgets/buildColorPicker.dart';
 import 'package:imaa/widgets/buildDivider.dart';
-import 'package:imaa/widgets/buildProfileCard.dart';
 import 'package:imaa/widgets/buildSection.dart';
 import 'package:imaa/widgets/buildToggleRow.dart';
+import 'package:imaa/widgets/cards.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
