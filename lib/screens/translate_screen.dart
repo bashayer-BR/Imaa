@@ -3,7 +3,6 @@ import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/theme/theme.dart';
 import 'package:imaa/widgets/Buttons.dart';
 import 'package:imaa/widgets/buildEmptyState.dart';
-import 'package:imaa/widgets/buildInputCard.dart';
 import 'package:imaa/widgets/buildResultLabel.dart';
 import 'package:imaa/widgets/buildTranslationInfo.dart';
 import 'package:imaa/widgets/cards.dart';
