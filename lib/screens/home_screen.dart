@@ -7,7 +7,6 @@ import 'package:imaa/screens/profile_screen.dart';
 import 'package:imaa/screens/settings_screen.dart';
 import 'package:imaa/widgets/Buttons.dart';
 import 'package:imaa/widgets/buildBottomNav.dart';
-import 'package:imaa/widgets/buildDailySignCard.dart';
 import 'package:imaa/widgets/buildGrid.dart';
 import 'package:imaa/widgets/buildHeader.dart';
 import 'package:imaa/widgets/cards.dart';
