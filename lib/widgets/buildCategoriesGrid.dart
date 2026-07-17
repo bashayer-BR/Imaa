@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:imaa/classes/Category.dart';
 import 'package:imaa/core/AppDim.dart';
-import 'package:imaa/widgets/buildCategoryCard.dart';
+import 'package:imaa/widgets/cards.dart';
 
 Widget buildCategoriesGrid(AppDimensions d) {
     final categories = [
