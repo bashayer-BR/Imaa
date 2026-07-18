@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/theme/theme.dart';
 import 'package:imaa/widgets/buildCurrentLesson.dart';
-import 'package:imaa/widgets/buildUnitsGrid.dart';
+import 'package:imaa/widgets/grids.dart';
 
 class LearnScreen extends StatelessWidget {
   const LearnScreen({super.key});
