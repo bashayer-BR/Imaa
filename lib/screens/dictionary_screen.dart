@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/theme/theme.dart';
-import 'package:imaa/widgets/buildCategoriesGrid.dart';
 import 'package:imaa/widgets/buildPopularWords.dart';
+import 'package:imaa/widgets/grids.dart';
 
 class DictionaryScreen extends StatefulWidget {
   const DictionaryScreen({super.key});

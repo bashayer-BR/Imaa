@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:imaa/classes/Category.dart';
 import 'package:imaa/classes/GridItem.dart';
 import 'package:imaa/classes/Reference.dart';
 import 'package:imaa/classes/Unit.dart';
