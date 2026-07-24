@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:imaa/core/AppDim.dart';
 import 'package:imaa/core/theme/theme.dart';
 import 'package:imaa/widgets/buildBestSignsRow.dart';
-import 'package:imaa/widgets/buildLessonsRow.dart';
 import 'package:imaa/widgets/buildSectionLabel.dart';
 import 'package:imaa/widgets/cards.dart';
 import 'package:imaa/widgets/grids.dart';
+import 'package:imaa/widgets/rows.dart';
 
 class ExploreScreen extends StatelessWidget {
   const ExploreScreen({super.key});
