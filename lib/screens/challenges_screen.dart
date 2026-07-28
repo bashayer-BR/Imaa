@@ -4,7 +4,7 @@ import 'package:imaa/core/theme/theme.dart';
 import 'package:imaa/widgets/buildDailyChallenge.dart';
 import 'package:imaa/widgets/buildGroupChallenge.dart';
 import 'package:imaa/widgets/buildSignQuiz.dart';
-import 'package:imaa/widgets/buildSpeedChallenge.dart';
+import 'package:imaa/widgets/challenge_widgets.dart';
 
 class ChallengesScreen extends StatelessWidget {
   const ChallengesScreen({super.key});
